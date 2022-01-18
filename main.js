@@ -1,11 +1,15 @@
-// var i = 0;
-// var txt = 'Lorem ipsum typing effect!'; /* The text */
-// var speed = 50; /* The speed/duration of the effect in milliseconds */
+var elNav = document.querySelector('.nav');
+var elbody = document.querySelector('body');
 
-// function typeWriter() {
-//   if (i < txt.length) {
-//     document.getElementById("demo").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, speed);
-//   }
-// }
+document.addEventListener('scroll', function(){
+    if(window.scrollY > 220){
+        elNav.classList.add('nav--fixed');
+        elbody.style.marginTop = elNav.offsetHeight + 'px';
+    }
+    else{
+        elNav.classList.remove('nav--fixed');
+        elbody.style.marginTop = 0;
+    }
+})
+
+
