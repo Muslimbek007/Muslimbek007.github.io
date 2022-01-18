@@ -4944,6 +4944,14 @@ a:hover {
   height: 300px;
   background-color: #fafafa;
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: height 0.6s ease;
+  transition: height 0.6s ease;
 }
 
 .magic-box--first .change--size {
@@ -4952,18 +4960,56 @@ a:hover {
   font-weight: 800;
 }
 
+.magic-box--first:hover {
+  background-color: #fcc236;
+  height: 350px;
+  color: white;
+  -webkit-animation: unorder 0.5s ease forwards;
+          animation: unorder 0.5s ease forwards;
+}
+
+.magic-box--first:hover .about__btn a {
+  color: white;
+}
+
+.magic-box--first:hover .change--size {
+  color: white;
+}
+
+.magic-box--first:hover .change--size:hover {
+  color: black;
+}
+
+.magic-box--first:hover .about__icon {
+  margin-top: 50px;
+}
+
+.about__icon {
+  -webkit-transition: margin-top 0.6s ease;
+  transition: margin-top 0.6s ease;
+}
+
 .magic-box--second {
   width: 700px;
-  height: 400px;
+  height: 350px;
   background-color: #fcc236;
   margin-left: 20px;
+  color: white;
 }
 
 .magic-box--second .change--size {
-  color: black;
+  color: white;
   font-size: 24px;
   font-weight: 800;
   padding: 30px;
+}
+
+.magic-box--second .change--size:hover {
+  color: black;
+}
+
+.magic-box--second .about__btn a {
+  color: white;
 }
 
 .magic-box--third {
@@ -4971,12 +5017,62 @@ a:hover {
   height: 300px;
   background-color: #fafafa;
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: height 0.6s ease;
+  transition: height 0.6s ease;
 }
 
 .magic-box--third .change--size {
   color: black;
   font-size: 24px;
   font-weight: 800;
+}
+
+.magic-box--third:hover {
+  color: white;
+  background-color: #fcc236;
+  height: 350px;
+  -webkit-animation: unorder 0.5s ease forwards;
+          animation: unorder 0.5s ease forwards;
+}
+
+.magic-box--third:hover .about__btn a {
+  color: white;
+}
+
+.magic-box--third:hover .change--size {
+  color: white;
+}
+
+.magic-box--third:hover .change--size:hover {
+  color: black;
+}
+
+.magic-box--third:hover .about__icon {
+  margin-top: 50px;
+}
+
+@-webkit-keyframes unorder {
+  from {
+    height: 0;
+  }
+  to {
+    height: 350px;
+  }
+}
+
+@keyframes unorder {
+  from {
+    height: 0;
+  }
+  to {
+    height: 350px;
+  }
 }
 
 .about__inner {
@@ -4997,6 +5093,10 @@ a:hover {
 
 .about__btn a:hover {
   color: #fcc236;
+}
+
+.items--for--under {
+  left: -40px;
 }
 
 .navbar {
@@ -6144,6 +6244,27 @@ body {
 
 body {
   overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.text__shape {
+  left: 8px;
+  position: absolute;
+  top: 189%;
+}
+
+.text__shape h2 {
+  color: #f7f7f7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 15px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(181.5deg) translateY(50%) translateX(0);
+          transform: rotate(181.5deg) translateY(50%) translateX(0);
 }
 
 .card {
